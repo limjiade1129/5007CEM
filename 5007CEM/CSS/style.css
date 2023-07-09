@@ -1,0 +1,385 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    min-height: 100vh;
+    text-decoration: none;
+    font-family: "Google Sans Regular";
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.logo{
+    font-size: 38px;
+    font-weight: bold;
+    color: #fefefe;
+}
+.hamburger{
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin: 0 8px;
+}
+
+.nav-bar ul li a:hover {
+    color: #11101b;
+    background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+    color: #11101b;
+    background: #fefefe; 
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px;
+    }
+    .nav-bar{
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .nav-bar.active {
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+.form {
+
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #11101b;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #11101b;
+  font-weight: bold;
+}
+
+.form-group input{
+    width: 75%;
+    padding: 6px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select{
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+   display: inline-block;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 25px ;
+    border: solid;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.form-group button:hover {
+    background-color: #1e1e33;
+}
+
+.button {
+display: inline-block;
+background-color: white;
+color: black;
+text-align: center;
+text-decoration: none;
+padding: 14px 25px ;
+border: solid;
+border-radius: 2px;
+font-size: 14px;
+cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: black;
+    color:white;
+}
+
+/* View Review */
+
+
+
+#food-table {
+      width: 65%;
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+    }
+#food-table td {
+      padding: 7px;
+      
+    }
+
+    .container-review{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0px;
+    }
+    
+.food-photo {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+.details-column {
+  width: 50%;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.details-column h4 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #11101b;
+}
+
+.details-column p {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #11101b;
+}
+    
+.h2-heading {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.details-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.details-value {
+  margin-bottom: 10px;
+}
+
+
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  width: 500px;
+  padding: 6px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 6px 0 0 5px;
+}
+
+.search-bar button {
+  background-color: #11101b;
+  color: #fefefe;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 5px;
+  font-size: 14px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.search-bar button:hover{
+    background-color:grey;
+    color:white;
+}
+
+.btn-delete {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+}
+
+/* About us */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container h2 {
+    text-align: center;
+    margin: 0px 0;
+    padding-top: 10px;
+}
+
+.container p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+.team-member {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 0;
+}
+
+.team-member p {
+    margin: 10px 0;
+}
+
+
+/* CSS styles for the map container */
+.map {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+
+    
+}
+            
+.footer{
+    margin-top: 40px;
+    padding: 20px;
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #11101b;
+}
+
+
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
